@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
 const userRoutes = require("./api/routes/users");
+const villageRoutes = require("./api/routes/villages");
 
 // connection to mongoDB with mongoose
 const MONGODB_URI =
@@ -25,6 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/users", userRoutes);
+app.use("/villages", villageRoutes);
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "/index.html"));
