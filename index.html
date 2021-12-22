@@ -4,9 +4,555 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Village Simulator API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to my api</h1>
+    <main>
+        <section id="main-sub-container">
+            <div>
+                <div id="selection-villages1" class="selection-container">
+                    <div class="selection-sub-container">
+                        <p class="request-name get">GET</p>
+                        <p class="short-url">/villages</p>
+                    </div>
+                    <span id="arrow-villages1" class="material-icons arrow-down">expand_more</span>
+                </div>
+                <div id="modal-villages1" class="modal">
+                    <div id="to-copy1-container" class="long-url" title="copy to clipboard">
+                        <p id="to-copy1">https://village-simulator.herokuapp.com/villages</p>
+                        <span id="span-copy1" class="material-icons">content_copy</span>
+                    </div>
+                    <div id="to-copy2-container" class="long-url" title="copy to clipboard">
+                        <p id="to-copy2">https://village-simulator.herokuapp.com/villages/{id}</p>
+                        <span id="span-copy2" class="material-icons">content_copy</span>
+                    </div>
+                    <div id="to-copy3-container" class="long-url" title="copy to clipboard">
+                        <p id="to-copy3">https://village-simulator.herokuapp.com/villages?username={username}</p>
+                        <span id="span-copy3" class="material-icons">content_copy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div id="selection-villages2" class="selection-container">
+                    <div class="selection-sub-container">
+                        <p class="request-name post">POST</p>
+                        <p class="short-url">/villages</p>
+                    </div>
+                    <span id="arrow-villages2" class="material-icons arrow-down">expand_more</span>
+                </div>
+                <div id="modal-villages2" class="modal">
+                    <div id="to-copy4-container" class="long-url" title="copy to clipboard">
+                        <p id="to-copy4">https://village-simulator.herokuapp.com/villages</p>
+                        <span id="span-copy4" class="material-icons">content_copy</span>
+                    </div>
+                    <div id="to-copy5-container" class="long-url" title="copy to clipboard">
+                        <p id="to-copy5">{<br>
+                            &emsp; "username" : String,<br>
+                            &emsp; "email" : String,<br>
+                            &emsp; "password" : String<br>
+                        }</p>
+                        <span id="span-copy5" class="material-icons">content_copy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div id="selection-villages3" class="selection-container">
+                    <div class="selection-sub-container">
+                        <p class="request-name patch">PATCH</p>
+                        <p class="short-url">/villages/{villageID}</p>
+                    </div>
+                    <span id="arrow-villages3" class="material-icons arrow-down">expand_more</span>
+                </div>
+                <div id="modal-villages3" class="modal">
+                    <div id="to-copy6-container" class="long-url" title="copy to clipboard">
+                        <p id="to-copy6">https://village-simulator.herokuapp.com/villages/{id}</p>
+                        <span id="span-copy6" class="material-icons">content_copy</span>
+                    </div>
+                    <div id="to-copy7-container" class="long-url" title="copy to clipboard">
+                        <p id="to-copy7">{<br>
+                            &emsp; "newVillageName" : String<br>
+                        }</p>
+                        <span id="span-copy7" class="material-icons">content_copy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div id="selection-villages4" class="selection-container">
+                    <div class="selection-sub-container">
+                        <p class="request-name delete">DELETE</p>
+                        <p class="short-url">/villages/{villageID}</p>
+                    </div>
+                    <span id="arrow-villages4" class="material-icons arrow-down">expand_more</span>
+                </div>
+                <div id="modal-villages4" class="modal">
+                    <div id="to-copy8-container" class="long-url" title="copy to clipboard">
+                        <p id="to-copy8">https://village-simulator.herokuapp.com/villages/{id}</p>
+                        <span id="span-copy8" class="material-icons">content_copy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div id="selection-villages5" class="selection-container">
+                    <div class="selection-sub-container">
+                        <p class="request-name get">GET</p>
+                        <p class="short-url">/users</p>
+                    </div>
+                    <span id="arrow-villages5" class="material-icons arrow-down">expand_more</span>
+                </div>
+                <div id="modal-villages5" class="modal">
+                    <div id="to-copy9-container" class="long-url" title="copy to clipboard">
+                        <p id="to-copy9">https://village-simulator.herokuapp.com/users</p>
+                        <span id="span-copy9" class="material-icons">content_copy</span>
+                    </div>
+                    <div id="to-copy10-container" class="long-url" title="copy to clipboard">
+                        <p id="to-copy10">https://village-simulator.herokuapp.com/users/{id}</p>
+                        <span id="span-copy10" class="material-icons">content_copy</span>
+                    </div>
+                    <div id="to-copy11-container" class="long-url" title="copy to clipboard">
+                        <p id="to-copy11">https://village-simulator.herokuapp.com/users?username={username}</p>
+                        <span id="span-copy11" class="material-icons">content_copy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div id="selection-villages6" class="selection-container">
+                    <div class="selection-sub-container">
+                        <p class="request-name post">POST</p>
+                        <p class="short-url">/users</p>
+                    </div>
+                    <span id="arrow-villages6" class="material-icons arrow-down">expand_more</span>
+                </div>
+                <div id="modal-villages6" class="modal">
+                    <div id="to-copy12-container" class="long-url" title="copy to clipboard">
+                        <p id="to-copy12">https://village-simulator.herokuapp.com/users</p>
+                        <span id="span-copy12" class="material-icons">content_copy</span>
+                    </div>
+                    <div id="to-copy13-container" class="long-url" title="copy to clipboard">
+                        <p id="to-copy13">
+                            {<br>
+                              &emsp;  "username" : String,<br>
+                              &emsp;  "villageName" : String,<br>
+                              &emsp;  "villagers" : Object,<br>
+                              &emsp;  "furniture" : Object,<br>
+                              &emsp;  "wallFurniture" : Object,<br>
+                              &emsp;  "fishes" : Object,<br>
+                              &emsp;  "bugs" : Object,<br>
+                              &emsp;  "sea" : Object,<br>
+                              &emsp;  "fossils" : Object<br>
+                            }
+                        </p>
+                        <span id="span-copy13" class="material-icons">content_copy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+<style>
+
+* {
+  box-sizing: border-box;
+  transition: 0.5s ease;
+}
+
+body {
+  background-color: #e9e9e9;
+  font-family: "Lato", sans-serif;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    column-gap: 8%;
+    justify-content: center;
+
+}
+
+#main-sub-container {
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-top: 65px;
+}
+
+.selection-container {
+    position: relative;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 7px 28px;
+    justify-content: space-between;
+    box-shadow: 2px 4px 14px -2px #3838383d;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.selection-sub-container {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content:start;
+    column-gap: 30px;
+}
+
+.arrow-down {
+    font-size: 50px;
+    color: #545454;
+}
+
+.request-name {
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    margin: 0;
+    width: 95px;
+    text-align: center;
+}
+
+.get {
+    background-color: #8E08C7;
+}
+
+.post {
+    background-color: #07AF1D;
+}
+
+.patch {
+    background-color: #0867C7;
+}
+
+.delete {
+    background-color: #D20000;
+}
+
+.short-url {
+    font-weight: 700;
+    color: #545454;
+    font-size: 20px;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: -70px;
+    background-color: #545454;
+    border-radius: 60px;
+    padding: 120px 40px 60px 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    display: none;
+    box-shadow: 2px 4px 14px -2px #3838383d;
+}
+
+.long-url {
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #373737;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.long-url p {
+    margin: 0;
+}
+
+.long-url span {
+    color: #999999;
+    transition: color 0.5s ease;
+}
+
+@media only screen and (min-width: 1920px) {
+    #main-sub-container {
+        margin-top: 140px;
+    }
+}
+
+</style>
+<script>
+    let booleanVillages1 = true;
+    let booleanVillages2 = true;
+    let booleanVillages3 = true;
+    let booleanVillages4 = true;
+    let booleanVillages5 = true;
+    let booleanVillages6 = true;
+
+    let selectionVillages1 = document.getElementById("selection-villages1");
+    let selectionVillages2 = document.getElementById("selection-villages2");
+    let selectionVillages3 = document.getElementById("selection-villages3");
+    let selectionVillages4 = document.getElementById("selection-villages4");
+    let selectionVillages5 = document.getElementById("selection-villages5");
+    let selectionVillages6 = document.getElementById("selection-villages6");
+
+    let modalVillages1 = document.getElementById("modal-villages1");
+    let modalVillages2 = document.getElementById("modal-villages2");
+    let modalVillages3 = document.getElementById("modal-villages3");
+    let modalVillages4 = document.getElementById("modal-villages4");
+    let modalVillages5 = document.getElementById("modal-villages5");
+    let modalVillages6 = document.getElementById("modal-villages6");
+
+    let arrowVillages1 = document.getElementById("arrow-villages1");
+    let arrowVillages2 = document.getElementById("arrow-villages2");
+    let arrowVillages3 = document.getElementById("arrow-villages3");
+    let arrowVillages4 = document.getElementById("arrow-villages4");
+    let arrowVillages5 = document.getElementById("arrow-villages5");
+    let arrowVillages6 = document.getElementById("arrow-villages6");
+
+    let toCopy1Container = document.getElementById("to-copy1-container");
+    let toCopy2Container = document.getElementById("to-copy2-container");
+    let toCopy3Container = document.getElementById("to-copy3-container");
+    let toCopy4Container = document.getElementById("to-copy4-container");
+    let toCopy5Container = document.getElementById("to-copy5-container");
+    let toCopy6Container = document.getElementById("to-copy6-container");
+    let toCopy7Container = document.getElementById("to-copy7-container");
+    let toCopy8Container = document.getElementById("to-copy8-container");
+    let toCopy9Container = document.getElementById("to-copy9-container");
+    let toCopy10Container = document.getElementById("to-copy10-container");
+    let toCopy11Container = document.getElementById("to-copy11-container");
+    let toCopy12Container = document.getElementById("to-copy12-container");
+    let toCopy13Container = document.getElementById("to-copy13-container");
+
+    let toCopy1 = document.getElementById("to-copy1");
+    let toCopy2 = document.getElementById("to-copy2");
+    let toCopy3 = document.getElementById("to-copy3");
+    let toCopy4 = document.getElementById("to-copy4");
+    let toCopy5 = document.getElementById("to-copy5");
+    let toCopy6 = document.getElementById("to-copy6");
+    let toCopy7 = document.getElementById("to-copy7");
+    let toCopy8 = document.getElementById("to-copy8");
+    let toCopy9 = document.getElementById("to-copy9");
+    let toCopy10 = document.getElementById("to-copy10");
+    let toCopy11 = document.getElementById("to-copy11");
+    let toCopy12 = document.getElementById("to-copy12");
+    let toCopy13 = document.getElementById("to-copy13");
+
+    let copySpan1 = document.getElementById("span-copy1");
+    let copySpan2 = document.getElementById("span-copy2");
+    let copySpan3 = document.getElementById("span-copy3");
+    let copySpan4 = document.getElementById("span-copy4");
+    let copySpan5 = document.getElementById("span-copy5");
+    let copySpan6 = document.getElementById("span-copy6");
+    let copySpan7 = document.getElementById("span-copy7");
+    let copySpan8 = document.getElementById("span-copy8");
+    let copySpan9 = document.getElementById("span-copy9");
+    let copySpan10 = document.getElementById("span-copy10");
+    let copySpan11 = document.getElementById("span-copy11");
+    let copySpan12 = document.getElementById("span-copy12");
+    let copySpan13 = document.getElementById("span-copy13");
+
+    selectionVillages1.addEventListener("click", e => {
+        e.preventDefault()
+        if(booleanVillages1){
+            modalVillages1.style.display = "flex";
+            arrowVillages1.style.transform = "rotate(180deg)"
+            booleanVillages1 = false;
+        } else {
+            modalVillages1.style.display = "none";
+            arrowVillages1.style.transform = "rotate(0deg)"
+            booleanVillages1 = true;
+        }
+    })
+
+    selectionVillages2.addEventListener("click", e => {
+        e.preventDefault()
+        if(booleanVillages2){
+            modalVillages2.style.display = "flex";
+            arrowVillages2.style.transform = "rotate(180deg)"
+            booleanVillages2 = false;
+        } else {
+            modalVillages2.style.display = "none";
+            arrowVillages2.style.transform = "rotate(0deg)"
+            booleanVillages2 = true;
+        }
+    })
+
+    selectionVillages3.addEventListener("click", e => {
+        e.preventDefault()
+        if(booleanVillages3){
+            modalVillages3.style.display = "flex";
+            arrowVillages3.style.transform = "rotate(180deg)"
+            booleanVillages3 = false;
+        } else {
+            modalVillages3.style.display = "none";
+            arrowVillages3.style.transform = "rotate(0deg)"
+            booleanVillages3 = true;
+        }
+    })
+
+    selectionVillages4.addEventListener("click", e => {
+        e.preventDefault()
+        if(booleanVillages4){
+            modalVillages4.style.display = "flex";
+            arrowVillages4.style.transform = "rotate(180deg)"
+            booleanVillages4 = false;
+        } else {
+            modalVillages4.style.display = "none";
+            arrowVillages4.style.transform = "rotate(0deg)"
+            booleanVillages4 = true;
+        }
+    })
+    
+    selectionVillages5.addEventListener("click", e => {
+        e.preventDefault()
+        if(booleanVillages5){
+            modalVillages5.style.display = "flex";
+            arrowVillages5.style.transform = "rotate(180deg)"
+            booleanVillages5 = false;
+        } else {
+            modalVillages5.style.display = "none";
+            arrowVillages5.style.transform = "rotate(0deg)"
+            booleanVillages5 = true;
+        }
+    })
+
+    selectionVillages6.addEventListener("click", e => {
+        e.preventDefault()
+        if(booleanVillages6){
+            modalVillages6.style.display = "flex";
+            arrowVillages6.style.transform = "rotate(180deg)"
+            booleanVillages6 = false;
+        } else {
+            modalVillages6.style.display = "none";
+            arrowVillages6.style.transform = "rotate(0deg)"
+            booleanVillages6 = true;
+        }
+    })
+
+    toCopy1Container.addEventListener("click", e => {
+        e.preventDefault();
+        navigator.clipboard.writeText(toCopy1.textContent);
+        copySpan1.style.color = "white"
+        setTimeout(function(){
+            copySpan1.style.color = "#999999"
+        }, 500);
+    })
+
+    toCopy2Container.addEventListener("click", e => {
+        e.preventDefault();
+        console.log(toCopy2)
+        navigator.clipboard.writeText(toCopy2.textContent);
+        copySpan2.style.color = "white"
+        setTimeout(function(){
+            copySpan2.style.color = "#999999"
+        }, 500);
+    })
+
+    toCopy3Container.addEventListener("click", e => {
+        e.preventDefault();
+        navigator.clipboard.writeText(toCopy3.textContent);
+        copySpan3.style.color = "white"
+        setTimeout(function(){
+            copySpan3.style.color = "#999999"
+        }, 500);
+    })
+
+    toCopy4Container.addEventListener("click", e => {
+        e.preventDefault();
+        navigator.clipboard.writeText(toCopy4.textContent);
+        copySpan4.style.color = "white"
+        setTimeout(function(){
+            copySpan4.style.color = "#999999"
+        }, 500);
+    })
+
+    toCopy5Container.addEventListener("click", e => {
+        e.preventDefault();
+        navigator.clipboard.writeText(toCopy5.textContent);
+        copySpan5.style.color = "white"
+        setTimeout(function(){
+            copySpan5.style.color = "#999999"
+        }, 500);
+    })
+
+    toCopy6Container.addEventListener("click", e => {
+        e.preventDefault();
+        navigator.clipboard.writeText(toCopy6.textContent);
+        copySpan6.style.color = "white"
+        setTimeout(function(){
+            copySpan6.style.color = "#999999"
+        }, 500);
+    })
+
+    toCopy7Container.addEventListener("click", e => {
+        e.preventDefault();
+        navigator.clipboard.writeText(toCopy7.textContent);
+        copySpan7.style.color = "white"
+        setTimeout(function(){
+            copySpan7.style.color = "#999999"
+        }, 500);
+    })
+
+    toCopy8Container.addEventListener("click", e => {
+        e.preventDefault();
+        navigator.clipboard.writeText(toCopy8.textContent);
+        copySpan8.style.color = "white"
+        setTimeout(function(){
+            copySpan8.style.color = "#999999"
+        }, 500);
+    })
+
+    toCopy9Container.addEventListener("click", e => {
+        e.preventDefault();
+        navigator.clipboard.writeText(toCopy9.textContent);
+        copySpan9.style.color = "white"
+        setTimeout(function(){
+            copySpan9.style.color = "#999999"
+        }, 500);
+    })
+
+    toCopy10Container.addEventListener("click", e => {
+        e.preventDefault();
+        navigator.clipboard.writeText(toCopy10.textContent);
+        copySpan10.style.color = "white"
+        setTimeout(function(){
+            copySpan10.style.color = "#999999"
+        }, 500);
+    })
+
+    toCopy11Container.addEventListener("click", e => {
+        e.preventDefault();
+        navigator.clipboard.writeText(toCopy11.textContent);
+        copySpan11.style.color = "white"
+        setTimeout(function(){
+            copySpan11.style.color = "#999999"
+        }, 500);
+    })
+
+    toCopy12Container.addEventListener("click", e => {
+        e.preventDefault();
+        navigator.clipboard.writeText(toCopy12.textContent);
+        copySpan12.style.color = "white"
+        setTimeout(function(){
+            copySpan12.style.color = "#999999"
+        }, 500);
+    })
+
+    toCopy13Container.addEventListener("click", e => {
+        e.preventDefault();
+        navigator.clipboard.writeText(toCopy13.textContent);
+        copySpan13.style.color = "white"
+        setTimeout(function(){
+            copySpan13.style.color = "#999999"
+        }, 500);
+    })
+    
+</script>
 </html>
