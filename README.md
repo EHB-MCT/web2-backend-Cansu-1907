@@ -6,7 +6,7 @@ URL to my API: https://village-simulator.herokuapp.com/
 USERTESTING:
 
 username: userTest
-password: 123
+<br/>password: 123
 
 
 RESOURCES:
