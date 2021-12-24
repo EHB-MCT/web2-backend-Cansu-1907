@@ -1,1 +1,14 @@
-# web2-backend-Cansu-1907
+API:
+
+URL to my API: https://village-simulator.herokuapp.com/
+
+
+USERTESTING:
+
+username: userTest
+password: 123
+
+
+RESOURCES:
+
+https://academind.com/tutorials/building-a-restful-api-with-nodejs
